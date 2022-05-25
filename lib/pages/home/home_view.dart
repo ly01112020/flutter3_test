@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter3_test/config/routes.dart';
-import 'package:flutter3_test/login/login_view.dart';
-import 'package:flutter3_test/router/router_view.dart';
+import 'package:flutter3_test/pages/login/login_view.dart';
+import 'package:flutter3_test/pages/router/router_view.dart';
 import 'package:get/get.dart';
 import 'home_logic.dart';
 

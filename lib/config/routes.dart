@@ -1,11 +1,10 @@
-import 'package:flutter3_test/home/home_binding.dart';
-import 'package:flutter3_test/login/login_binding.dart';
+import 'package:flutter3_test/pages/home/home_binding.dart';
+import 'package:flutter3_test/pages/home/home_view.dart';
+import 'package:flutter3_test/pages/login/login_binding.dart';
+import 'package:flutter3_test/pages/login/login_view.dart';
+import 'package:flutter3_test/pages/router/router_binding.dart';
+import 'package:flutter3_test/pages/router/router_view.dart';
 import 'package:get/get.dart';
-import '../home/home_view.dart';
-import '../login/login_view.dart';
-import '../router/router_view.dart';
-import '../router/router_binding.dart';
-
 // 定义路由
 class AppRoutes {
   static const String home = '/';
