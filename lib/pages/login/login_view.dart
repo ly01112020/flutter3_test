@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter3_test/config/routes.dart';
 import 'package:get/get.dart';
 
 import 'login_logic.dart';
@@ -11,13 +12,14 @@ class LoginPage extends StatelessWidget {
     final primaryColor = Theme.of(context).primaryColor;
 
     return Scaffold(
-      backgroundColor: primaryColor,
+      // backgroundColor: primaryColor,
+      appBar: AppBar(title: const Text(AppRoutes.loginName)),
       body: Container(
         child: MaterialButton(
           onPressed: (){
             Get.back();
           },
-          child: Text('返回'),
+          child: const Text('返回'),
         ),
       ),
     );

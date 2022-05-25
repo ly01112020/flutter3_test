@@ -8,9 +8,13 @@ import 'package:get/get.dart';
 // 定义路由
 class AppRoutes {
   static const String home = '/';
+  static const String homeName = '首页';
+
   static const String login = '/login';
+  static const String loginName = '登录';
 
   static const String router = '/router';
+  static const String routerName = '路由';
 }
 // 注册路由到 getx
 class AppPages {
@@ -18,19 +22,19 @@ class AppPages {
     GetPage(
         name: AppRoutes.home,
         page: () => HomePage(),
-        title:"主页",
+        title:AppRoutes.homeName,
         binding: HomeBinding()
     ),
     GetPage(
         name: AppRoutes.login,
         page: () => LoginPage(),
-        title:"登录",
+        title:AppRoutes.loginName,
         binding: LoginBinding()
     ),
     GetPage(
         name: AppRoutes.router,
         page: () => RouterPage(),
-        title:"路由演示",
+        title:AppRoutes.routerName,
         binding: RouterBinding()
     )
   ];
