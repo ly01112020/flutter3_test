@@ -4,6 +4,8 @@ import 'package:flutter3_test/pages/login/login_binding.dart';
 import 'package:flutter3_test/pages/login/login_view.dart';
 import 'package:flutter3_test/pages/router/router_binding.dart';
 import 'package:flutter3_test/pages/router/router_view.dart';
+import 'package:flutter3_test/pages/router/sub1/sub1_binding.dart';
+import 'package:flutter3_test/pages/router/sub1/sub1_view.dart';
 import 'package:get/get.dart';
 // 定义路由
 class AppRoutes {
@@ -15,6 +17,10 @@ class AppRoutes {
 
   static const String router = '/router';
   static const String routerName = '路由';
+
+  static const String sub1 = '/router/sub1';
+  static const String sub1Name = '子路由1';
+  static const String sub1Detail = '/router/sub1/:id';
 }
 // 注册路由到 getx
 class AppPages {
@@ -36,6 +42,18 @@ class AppPages {
         page: () => RouterPage(),
         title:AppRoutes.routerName,
         binding: RouterBinding()
+    ),
+    GetPage(
+        name: AppRoutes.sub1,
+        page: () => Sub1Page(),
+        title:AppRoutes.sub1Name,
+        binding: Sub1Binding()
+    ),
+    GetPage(
+        name: AppRoutes.sub1Detail,
+        page: () => Sub1Page(),
+        title:AppRoutes.sub1Name,
+        binding: Sub1Binding()
     )
   ];
 }
