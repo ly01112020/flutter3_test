@@ -43,7 +43,7 @@ class TwoPage extends StatelessWidget {
                   GetBuilder<StateLogic>(
                     assignId: true,
                     builder: (logic) {
-                      return Text('嵌套测试 ${parentLogic.state.userName}');
+                      return Text('Logic 嵌套测试 ${parentLogic.state.userName}');
                     },
                   ),
                 ],
