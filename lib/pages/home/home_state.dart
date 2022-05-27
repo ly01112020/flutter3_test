@@ -8,7 +8,8 @@ class HomeState {
     ///Initialize variables
     menuList=[
       ZtMenuItem(path: AppRoutes.router, name: AppRoutes.routerName),
-      ZtMenuItem(path: AppRoutes.login, name: AppRoutes.loginName)
+      ZtMenuItem(path: AppRoutes.state, name: AppRoutes.stateName),
+      ZtMenuItem(path: AppRoutes.login, name: AppRoutes.loginName),
     ];
   }
 }

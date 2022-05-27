@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter3_test/config/routes.dart';
+import 'package:flutter3_test/middlewares/route.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -13,6 +14,7 @@ void main() {
       },
       child: child,
     ),
+    routingCallback:RouteMiddleWare.observer
   ));
 }
 void hideKeyboard(BuildContext context) {

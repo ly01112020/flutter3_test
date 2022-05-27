@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter3_test/config/routes.dart';
+import 'package:flutter3_test/pages/components/button.dart';
 import 'package:flutter3_test/pages/router/sub1/sub1_binding.dart';
 import 'package:flutter3_test/pages/router/sub1/sub1_view.dart';
 import 'package:get/get.dart';
@@ -41,8 +42,24 @@ class RouterPage extends StatelessWidget {
                 Get.to(Sub1Page(),binding: Sub1Binding());
               }),
 
-              LyButton('toNamed',(){
-                print('333');
+              LyButton('SnackBars',(){
+                Get.snackbar(
+                  '系统提示', '你是最靓的仔',
+                  colorText: Colors.white,duration: Duration(seconds: 2),
+                  backgroundColor: Colors.green
+                );
+              }),
+              LyButton('Dialogs',(){
+                Get.defaultDialog(
+                  title: '系统提示',
+                   content:  Text('你是最靓的仔你是最靓的仔你是最靓的仔?'),
+                   onConfirm: (){
+                    print('是的');
+                   },
+                  onCancel: (){
+                    print('cancel');
+                  }
+                );
               })
             ],
           ),
@@ -51,15 +68,4 @@ class RouterPage extends StatelessWidget {
     );
   }
 
-  Widget LyButton(text, onClick) {
-    return Column(
-      children: [
-        ElevatedButton(
-          child: Text(text),
-          onPressed: onClick
-        ),
-        const SizedBox(height: 8.0),
-      ],
-    );
-  }
 }

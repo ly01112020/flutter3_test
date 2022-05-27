@@ -6,7 +6,12 @@ import 'package:flutter3_test/pages/router/router_binding.dart';
 import 'package:flutter3_test/pages/router/router_view.dart';
 import 'package:flutter3_test/pages/router/sub1/sub1_binding.dart';
 import 'package:flutter3_test/pages/router/sub1/sub1_view.dart';
+import 'package:flutter3_test/pages/state/state_binding.dart';
+import 'package:flutter3_test/pages/state/state_view.dart';
+import 'package:flutter3_test/pages/state/two/two_view.dart';
 import 'package:get/get.dart';
+
+import '../pages/state/two/two_binding.dart';
 // 定义路由
 class AppRoutes {
   static const String home = '/';
@@ -21,6 +26,11 @@ class AppRoutes {
   static const String sub1 = '/router/sub1';
   static const String sub1Name = '子路由1';
   static const String sub1Detail = '/router/sub1/:id';
+
+  static const String state = '/state';
+  static const String stateName = '状态管理';
+  static const String stateTwo = '/state/two';
+  static const String stateTwoName = '状态管理';
 }
 // 注册路由到 getx
 class AppPages {
@@ -54,6 +64,18 @@ class AppPages {
         page: () => Sub1Page(),
         title:AppRoutes.sub1Name,
         binding: Sub1Binding()
+    ),
+    GetPage(
+        name: AppRoutes.state,
+        page: () => StatePage(),
+        title:AppRoutes.stateName,
+        binding: StateBinding()
+    ),
+    GetPage(
+        name: AppRoutes.stateTwo,
+        page: () => TwoPage(),
+        title:AppRoutes.stateTwoName,
+        binding: TwoBinding()
     )
   ];
 }
