@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter3_test/config/routes.dart';
 import 'package:get/get.dart';
 
 import 'network_logic.dart';
@@ -9,6 +10,11 @@ class NetworkPage extends StatelessWidget {
     final logic = Get.find<NetworkLogic>();
     final state = Get.find<NetworkLogic>().state;
 
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Text(AppRoutes.networkName)),
+      body: Column(
+
+      ),
+    );
   }
 }

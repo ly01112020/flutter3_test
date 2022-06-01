@@ -10,6 +10,7 @@ class HomeState {
       ZtMenuItem(path: AppRoutes.router, name: AppRoutes.routerName),
       ZtMenuItem(path: AppRoutes.state, name: AppRoutes.stateName),
       ZtMenuItem(path: AppRoutes.login, name: AppRoutes.loginName),
+      ZtMenuItem(path: AppRoutes.network, name: AppRoutes.networkName),
     ];
   }
 }
